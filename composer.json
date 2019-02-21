@@ -9,6 +9,7 @@
             "email": "riazshahartist@hotmail.com"
         }
     ],
-    "minimum-stability": "alpha",
-    "require": {}
+    "minimum-stability": "dev",
+    "require": {},
+	
 }
