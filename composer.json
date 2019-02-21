@@ -1,0 +1,7 @@
+{
+    "name": "riazsha/simple-jquery",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
