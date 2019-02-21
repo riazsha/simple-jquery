@@ -1,7 +1,14 @@
 {
     "name": "riazsha/simple-jquery",
+	"description": "This is a contact package of laravel, which job is to send email and then save in database.",
     "type": "library",
     "license": "MIT",
-    "minimum-stability": "dev",
+	"authors": [
+        {
+            "name": "riazsha",
+            "email": "riazshahartist@hotmail.com"
+        }
+    ],
+    "minimum-stability": "alpha",
     "require": {}
 }
