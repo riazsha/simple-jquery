@@ -3,19 +3,40 @@
 <title>HTML Tutorial</title>
 <body>
 
-<h1 id="test">This is a heading</h1>
-<p>This is a paragraph.</p>
 
+<button type="button" data-trigger="button1">Model</button>
+<button type="button" data-trigger="button2">Model</button>
+<button type="button" data-trigger="button3">Model</button>
+<button type="button" data-trigger="button4">Model</button>
+<button type="button" data-trigger="button5">Model</button>
+<!--Model 1-->
+<div class="model" id="button1" style="display:none">
+	this is model 1
+</div>
+<div class="model" id="button2" style="display:none">
+	this is model 2
+</div>
+<div class="model" id="button3" style="display:none">
+	this is model 3
+</div>
+<div class="model" id="button4" style="display:none">
+	this is model 4
+</div>
+<div class="model" id="button5" style="display:none">
+	this is model 5
+</div>
 
 <script src="asset/jquery-3.3.1.js"></script>
 <script>
-	// jquery test
-	// jquery test
-	
-	$(function(){
-		$("#test").css("color","red");
-		//check  this 
-	});
+	var button = document.querySelectorAll("button");
+	for(var i=0; i<button.length; i++){
+		//get attribute value 
+		button[i].onclick = function(){
+			var divId = this.getAttribute('data-trigger')
+			document.getElementById(divId).style.display='block';
+		}
+	}
+
 
 </script>
 </body>
