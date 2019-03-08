@@ -3,12 +3,14 @@
 <title>HTML Tutorial</title>
 <body>
 
-
-<button type="button" data-trigger="button1">Model</button>
-<button type="button" data-trigger="button2">Model</button>
-<button type="button" data-trigger="button3">Model</button>
-<button type="button" data-trigger="button4">Model</button>
-<button type="button" data-trigger="button5">Model</button>
+<!-- data target and data trigger both attributes required for model
+	data target need to trigger model and data target need to identify the id-->
+	
+<button type="button" data-trigger="trigger" data-target="button1">Model</button>
+<button type="button" data-trigger="trigger" data-target="button2">Mode2</button>
+<button type="button" data-trigger="trigger" data-target="button3">Mode3</button>
+<button type="button" data-trigger="trigger" data-target="button4">Mode4</button>
+<button type="button" data-trigger="trigger" data-target="button5">Mode5</button>
 <!--Model 1-->
 <div class="model" id="button1" style="display:none">
 	this is model 1
@@ -28,12 +30,19 @@
 
 <script src="asset/jquery-3.3.1.js"></script>
 <script>
+	var divId, modelDiv, closeSpan;
 	var button = document.querySelectorAll("button");
 	for(var i=0; i<button.length; i++){
 		//get attribute value 
 		button[i].onclick = function(){
-			var divId = this.getAttribute('data-trigger')
-			document.getElementById(divId).style.display='block';
+			var modelClick = this.getAttribute('data-trigger')
+			if(modelClick==="trigger"){
+				divId = this.getAttribute('data-target')
+				modelDiv = document.getElementById(divId).style.display='block';
+				closeSpan = document.createElement("span");
+				closeSpan.innerHTML="X";
+				document.getElementById(divId).appendChild(closeSpan)
+			}
 		}
 	}
 
